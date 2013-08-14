@@ -8,17 +8,18 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/bar
+~MSle0/bar
 
 # Last Substitute Search Pattern:
-~MSle0&0
+~MSle0~&^#
 
 # Last Substitute String:
-$7
+$
 
 # Command Line History (newest to oldest):
 :q
 :w
+:8,85s/^#//g
 :vi about_memory.css
 :split
 :vi report.html
@@ -66,9 +67,9 @@ $7
 :vi static/app/controllers/slowspeeddetail.js
 :vi conf/layout.yaml
 :0,$s/RateBw/SlowSpeedDetail/g
-:vi pages/downloadapi.py
 
 # Search String History (newest to oldest):
+? ^#
 ?/bar
 ?/radius
 ? 0
@@ -87,7 +88,6 @@ $7
 ?/app
 ? json.edumps
 ? json.dumps
-? ^#
 ?/clean
 ?/pagebys
 ? RateBw
@@ -156,18 +156,21 @@ $7
 	<
 
 # File marks:
-'0  29  0  ~/.git/COMMIT_EDITMSG
-'1  2  0  ~/.gitignore
-'2  1  0  ~/.git/MERGE_MSG
-'3  120  7  ~/Gitwork/Angularjs-Report/angularjsreport/html/report.html
-'4  33  0  ~/Gitwork/Angularjs-Report/angularjsreport/html/report.html
-'5  18  45  ~/Gitwork/Angularjs-Report/angularjsreport/html/js/app.js
-'6  1  0  ~/Gitwork/Angularjs-Report/setup.py
-'7  8  0  ~/Gitwork/angular-d3
-'8  23  11  ~/CDN_DATA_ANA/tiger/pages/zhoubao.py
-'9  42  11  ~/CDN_DATA_ANA/tiger/pages/zhoubao.py
+'0  77  1  ~/.git/COMMIT_EDITMSG
+'1  85  1  ~/.git/COMMIT_EDITMSG
+'2  29  0  ~/.git/COMMIT_EDITMSG
+'3  2  0  ~/.gitignore
+'4  1  0  ~/.git/MERGE_MSG
+'5  120  7  ~/Gitwork/Angularjs-Report/angularjsreport/html/report.html
+'6  33  0  ~/Gitwork/Angularjs-Report/angularjsreport/html/report.html
+'7  18  45  ~/Gitwork/Angularjs-Report/angularjsreport/html/js/app.js
+'8  1  0  ~/Gitwork/Angularjs-Report/setup.py
+'9  8  0  ~/Gitwork/angular-d3
 
 # Jumplist (newest first):
+-'  77  1  ~/.git/COMMIT_EDITMSG
+-'  85  1  ~/.git/COMMIT_EDITMSG
+-'  93  0  ~/.git/COMMIT_EDITMSG
 -'  29  0  ~/.git/COMMIT_EDITMSG
 -'  2  0  ~/.gitignore
 -'  1  0  ~/.gitignore
@@ -263,14 +266,11 @@ $7
 -'  20  8  ~/Gitwork/yishenggudou.github.com/blog/source/python/kivy-ios.rst
 -'  120  7  ~/Gitwork/Angularjs-Report/angularjsreport/html/report.html
 -'  118  6  ~/Gitwork/Angularjs-Report/angularjsreport/html/report.html
--'  119  5  ~/Gitwork/Angularjs-Report/angularjsreport/html/report.html
--'  101  0  ~/Gitwork/Angularjs-Report/angularjsreport/html/report.html
--'  97  51  ~/Gitwork/Angularjs-Report/angularjsreport/html/report.html
 
 # History of marks within files (newest to oldest):
 
 > ~/.git/COMMIT_EDITMSG
-	"	29	0
+	"	77	1
 	.	8	0
 	+	8	0
 
