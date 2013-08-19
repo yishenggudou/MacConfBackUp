@@ -125,7 +125,7 @@ autocmd BufNewFile *.py    0r ~/.vim/template/pytemplate.py
 autocmd BufNewFile *.sh    0r ~/.vim/template/myshell.sh
 autocmd BufNewFile *.js    0r ~/.vim/template/myjs.js
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 set paste
 
 "https://github.com/tpope/vim-pathogen
@@ -138,3 +138,11 @@ match OverLength /\%81v.\+/
 
 command Scr execute "!screencapture -s images/$( uuidgen ).png"
 let g:jedi#auto_initialization = 0
+
+if !has('python')
+    echo "Error: Required vim compiled with +python"
+    finish
+else
+    echo "python has installed"
+    finish
+endif

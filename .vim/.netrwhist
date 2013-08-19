@@ -1,6 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/timger/Gitwork/lianlu/lianlu/Store'
-let g:netrw_dirhist_2='/Users/timger/Gitwork/lianlu/lianlu/Fetch'
-let g:netrw_dirhist_3='/Users/timger/Gitwork/angular-d3'
-let g:netrw_dirhist_4='/Users/timger/Gitwork/Angularjs-Report'
+let g:netrw_dirhist_cnt =0

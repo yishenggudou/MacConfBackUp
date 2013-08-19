@@ -17,7 +17,7 @@ export EDITOR=vim
 # MacPorts Installer addition on 2012-07-23_at_22:57:26: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 #:/Applications/Kivy.app/Contents/MacOS:/Applications/Kivy.app/Contents/Resources/kivy:/Library/Python/2.7/site-packages
-export PATH=${PATH}:/usr/local/share/python/
+export PATH=${PATH}
 
 if [ -z "$PYTHONPATH" ]
 then
