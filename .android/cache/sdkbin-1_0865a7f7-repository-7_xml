@@ -898,63 +898,33 @@ November 13, 2012
     <!-- TOOLS ........................ -->
 
     <sdk:tool>
-        <!-- Generated at Wed Feb  6 12:22:00 2013 from git_tools_r21.1 @ 569685 -->
+        <!-- Generated at Tue May 14 16:45:59 2013 from git_tools_r22 @ 675183 -->
         <sdk:revision>
-            <sdk:major>21</sdk:major>
-            <sdk:minor>1</sdk:minor>
+            <sdk:major>22</sdk:major>
         </sdk:revision>
         <sdk:min-platform-tools-rev>
             <sdk:major>16</sdk:major>
         </sdk:min-platform-tools-rev>
         <sdk:archives>
             <sdk:archive arch="any" os="windows">
-                <sdk:size>99246397</sdk:size>
-                <sdk:checksum type="sha1">1aabf96102c31485749274df9f209dd6b38e521a</sdk:checksum>
-                <sdk:url>tools_r21.1-windows.zip</sdk:url>
+                <sdk:size>107384736</sdk:size>
+                <sdk:checksum type="sha1">fd1b9de782737e6b80af74760db3f3f7ebbfcbcc</sdk:checksum>
+                <sdk:url>tools_r22-windows.zip</sdk:url>
             </sdk:archive>
             <sdk:archive arch="any" os="linux">
-                <sdk:size>91760963</sdk:size>
-                <sdk:checksum type="sha1">770818f4e92d48ea40f512035419a5306454dd5c</sdk:checksum>
-                <sdk:url>tools_r21.1-linux.zip</sdk:url>
+                <sdk:size>99899009</sdk:size>
+                <sdk:checksum type="sha1">49d866d568fe8517534a7918e98fa401c5ad8d0e</sdk:checksum>
+                <sdk:url>tools_r22-linux.zip</sdk:url>
             </sdk:archive>
             <sdk:archive arch="any" os="macosx">
-                <sdk:size>66048772</sdk:size>
-                <sdk:checksum type="sha1">ef4842763c350ff33a52fb34b502e3a5164507c6</sdk:checksum>
-                <sdk:url>tools_r21.1-macosx.zip</sdk:url>
+                <sdk:size>71209983</sdk:size>
+                <sdk:checksum type="sha1">51dd81cdb7cc6cdc4a4ae543d43a22e0ed62bb45</sdk:checksum>
+                <sdk:url>tools_r22-macosx.zip</sdk:url>
             </sdk:archive>
         </sdk:archives>
         <sdk:uses-license ref="android-sdk-license"/>
     </sdk:tool>
 
-    <sdk:tool>
-        <!-- Generated at Wed Feb  6 11:19:44 2013 from git_tools_r21.1 @ 569685 -->
-        <sdk:revision>
-            <sdk:major>21</sdk:major>
-            <sdk:minor>1</sdk:minor>
-            <sdk:preview>3</sdk:preview>
-        </sdk:revision>
-        <sdk:min-platform-tools-rev>
-            <sdk:major>16</sdk:major>
-        </sdk:min-platform-tools-rev>
-        <sdk:archives>
-            <sdk:archive arch="any" os="windows">
-                <sdk:size>99246397</sdk:size>
-                <sdk:checksum type="sha1">1aabf96102c31485749274df9f209dd6b38e521a</sdk:checksum>
-                <sdk:url>tools_r21.1_rc3-windows.zip</sdk:url>
-            </sdk:archive>
-            <sdk:archive arch="any" os="linux">
-                <sdk:size>91760963</sdk:size>
-                <sdk:checksum type="sha1">770818f4e92d48ea40f512035419a5306454dd5c</sdk:checksum>
-                <sdk:url>tools_r21.1_rc3-linux.zip</sdk:url>
-            </sdk:archive>
-            <sdk:archive arch="any" os="macosx">
-                <sdk:size>66048772</sdk:size>
-                <sdk:checksum type="sha1">ef4842763c350ff33a52fb34b502e3a5164507c6</sdk:checksum>
-                <sdk:url>tools_r21.1_rc3-macosx.zip</sdk:url>
-            </sdk:archive>
-        </sdk:archives>
-        <sdk:uses-license ref="android-sdk-license"/>
-    </sdk:tool>
 
     <!-- DOCS ........................ -->
 

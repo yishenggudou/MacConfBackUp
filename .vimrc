@@ -120,10 +120,12 @@ endif
 filetype plugin on
 autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
+autocmd FileType tmpl set ft=htmldjango.html " For SnipMate
 
 autocmd BufNewFile *.py    0r ~/.vim/template/pytemplate.py
 autocmd BufNewFile *.sh    0r ~/.vim/template/myshell.sh
 autocmd BufNewFile *.js    0r ~/.vim/template/myjs.js
+autocmd BufNewFile *.rst    0r ~/.vim/template/my.rst
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 "autocmd BufWritePost *.py call Flake8()
 set paste
@@ -136,13 +138,13 @@ set syntax=rest
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
 match OverLength /\%81v.\+/
 
-command Scr execute "!screencapture -s images/$( uuidgen ).png"
+command Scr execute "!/Users/timger/scripts/Scr.py|tail -n 1"
 let g:jedi#auto_initialization = 0
 
 if !has('python')
     echo "Error: Required vim compiled with +python"
     finish
-else
-    echo "python has installed"
-    finish
+"else
+    "echo "python has installed"
+    "finish
 endif

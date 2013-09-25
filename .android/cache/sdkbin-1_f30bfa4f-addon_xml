@@ -751,14 +751,14 @@ August 15, 2011
     </sdk:add-on>
 
     <sdk:add-on>
-        <!-- Generated at Wed Feb 13 11:30:29 2013 from git_jb-mr1.1-dev @ 576024 -->
+        <!-- Generated at Tue May 14 08:07:47 2013 from git_jb-mr1.1-dev @ 673949 -->
         <sdk:vendor-id>google</sdk:vendor-id>
         <sdk:vendor-display>Google Inc.</sdk:vendor-display>
         <sdk:name-id>google_apis</sdk:name-id>
         <sdk:name-display>Google APIs</sdk:name-display>
         <sdk:description>Android + Google APIs</sdk:description>
         <sdk:api-level>17</sdk:api-level>
-        <sdk:revision>2</sdk:revision>
+        <sdk:revision>3</sdk:revision>
         <sdk:libs>
             <sdk:lib>
                 <sdk:name>com.google.android.maps</sdk:name>
@@ -772,9 +772,39 @@ August 15, 2011
         </sdk:libs>
         <sdk:archives>
             <sdk:archive arch="any" os="any">
-                <sdk:size>132867858</sdk:size>
-                <sdk:checksum type="sha1">65d88cfa6eeb5cd81ad88ab75ca788562b0c05e9</sdk:checksum>
-                <sdk:url>google_apis-17_r02.zip</sdk:url>
+                <sdk:size>137156978</sdk:size>
+                <sdk:checksum type="sha1">8246f61d24f0408c8e7bc352a1e522b7e2b619ba</sdk:checksum>
+                <sdk:url>google_apis-17_r03.zip</sdk:url>
+            </sdk:archive>
+        </sdk:archives>
+        <sdk:uses-license ref="android-sdk-license"/>
+    </sdk:add-on>
+
+    <sdk:add-on>
+        <!-- Generated at Thu Sep 19 12:49:30 2013 from git_jb-mr2-dev @ 836888 -->
+        <sdk:vendor-id>google</sdk:vendor-id>
+        <sdk:vendor-display>Google Inc.</sdk:vendor-display>
+        <sdk:name-id>google_apis</sdk:name-id>
+        <sdk:name-display>Google APIs</sdk:name-display>
+        <sdk:description>Android + Google APIs</sdk:description>
+        <sdk:api-level>18</sdk:api-level>
+        <sdk:revision>3</sdk:revision>
+        <sdk:libs>
+            <sdk:lib>
+                <sdk:name>com.google.android.maps</sdk:name>
+            </sdk:lib>
+            <sdk:lib>
+                <sdk:name>com.android.future.usb.accessory</sdk:name>
+            </sdk:lib>
+            <sdk:lib>
+                <sdk:name>com.google.android.media.effects</sdk:name>
+            </sdk:lib>
+        </sdk:libs>
+        <sdk:archives>
+            <sdk:archive arch="any" os="any">
+                <sdk:size>143149689</sdk:size>
+                <sdk:checksum type="sha1">147bce09c1163edc17194f3db496ec1086fcf965</sdk:checksum>
+                <sdk:url>google_apis-18_r03.zip</sdk:url>
             </sdk:archive>
         </sdk:archives>
         <sdk:uses-license ref="android-sdk-license"/>
@@ -783,8 +813,8 @@ August 15, 2011
     <!-- EXTRAS VENDOR=ANDROID ........................ -->
 
     <sdk:extra>
-        <!-- Generated at Wed Feb 13 11:31:55 2013 from git_jb-mr1.1-dev @ 576024 -->
-        <sdk:revision>12</sdk:revision>
+        <!-- Generated at Tue Jul 23 17:18:50 2013 from git_jb-mr2-ub-dev @ 751786 -->
+        <sdk:revision>18</sdk:revision>
         <sdk:vendor-display>Android</sdk:vendor-display>
         <sdk:vendor-id>android</sdk:vendor-id>
         <sdk:name-display>Android Support Library</sdk:name-display>
@@ -792,15 +822,50 @@ August 15, 2011
         <sdk:old-paths>compatibility</sdk:old-paths>
         <sdk:archives>
             <sdk:archive arch="any" os="any">
-                <sdk:size>1281054</sdk:size>
-                <sdk:checksum type="sha1">e89f37ad09a75131962cdd760ad24cdfa44fd1bf</sdk:checksum>
-                <sdk:url>support_r12.zip</sdk:url>
+                <sdk:size>4438319</sdk:size>
+                <sdk:checksum type="sha1">bd67b4b8a6bac629f24c8aea75c3619a26d9a568</sdk:checksum>
+                <sdk:url>support_r18.zip</sdk:url>
+            </sdk:archive>
+        </sdk:archives>
+        <sdk:uses-license ref="android-sdk-license"/>
+    </sdk:extra>
+
+    <sdk:extra>
+        <!-- Generated from git_jb-mr2-ub-dev @ 751786 -->
+        <sdk:revision>2</sdk:revision>
+        <sdk:vendor-display>Android</sdk:vendor-display>
+        <sdk:vendor-id>android</sdk:vendor-id>
+        <sdk:name-display>Android Support Repository</sdk:name-display>
+        <sdk:description>Local Maven repository for Support Libraries</sdk:description>
+        <sdk:path>m2repository</sdk:path>
+        <sdk:archives>
+            <sdk:archive arch="any" os="any">
+                <sdk:size>3705797</sdk:size>
+                <sdk:checksum type="sha1">c4284e4bf17a1e8bafc96a18de36984022d5a46a</sdk:checksum>
+                <sdk:url>android_m2repository_r02.zip</sdk:url>
             </sdk:archive>
         </sdk:archives>
         <sdk:uses-license ref="android-sdk-license"/>
     </sdk:extra>
 
     <!-- EXTRAS VENDOR=GOOGLE ....................... -->
+
+    <sdk:extra>
+        <sdk:vendor-id>google</sdk:vendor-id>
+        <sdk:vendor-display>Google Inc.</sdk:vendor-display>
+        <sdk:name-display>Google Repository</sdk:name-display>
+        <sdk:path>m2repository</sdk:path>
+        <sdk:revision>2</sdk:revision>
+        <sdk:description>Local Maven repository for Google Libraries</sdk:description>
+        <sdk:uses-license ref="android-sdk-license"/>
+        <sdk:archives>
+            <sdk:archive os="any">
+                <sdk:size>2043649</sdk:size>
+                <sdk:checksum type="sha1">f518e0170e84a6bccbadb8a043989cc61f4c37aa</sdk:checksum>
+                <sdk:url>google_m2repository_r02.zip</sdk:url>
+            </sdk:archive>
+        </sdk:archives>
+    </sdk:extra>
 
     <sdk:extra>
         <sdk:vendor-id>google</sdk:vendor-id>
@@ -845,34 +910,34 @@ August 15, 2011
         <sdk:vendor-display>Google Inc.</sdk:vendor-display>
         <sdk:name-display>Google Play services</sdk:name-display>
         <sdk:path>google_play_services</sdk:path>
-        <sdk:revision>5</sdk:revision>
+        <sdk:revision>12</sdk:revision>
         <sdk:description>Google Play Services client library and sample code</sdk:description>
         <sdk:desc-url>https://developers.google.com/android/google-play-services/index</sdk:desc-url>
         <sdk:uses-license ref="android-sdk-license"/>
         <sdk:archives>
             <sdk:archive os="any">
-                <sdk:size>4232443</sdk:size>
-                <sdk:checksum type="sha1">f5b0034f785d86a30bdb2fe0fd64ecc810338309</sdk:checksum>
-                <sdk:url>google_play_services_3025110_r05.zip</sdk:url>
+                <sdk:size>5265389</sdk:size>
+                <sdk:checksum type="sha1">92558dbc380bba3d55d0ec181167fb05ce7c79d9</sdk:checksum>
+                <sdk:url>google_play_services_3265130_r12.zip</sdk:url>
             </sdk:archive>
         </sdk:archives>
     </sdk:extra>
 
     <sdk:extra>
-        <!-- Generated at Tue Aug 28 11:07:05 2012 from git_master @ 449897 -->
+        <!-- Generated at Thu Jul 18 16:46:04 PDT 2013 from git_master @ 745409 -->
         <sdk:vendor-id>google</sdk:vendor-id>
         <sdk:vendor-display>Google Inc.</sdk:vendor-display>
         <sdk:name-display>Google USB Driver</sdk:name-display>
         <sdk:path>usb_driver</sdk:path>
-        <sdk:revision>7</sdk:revision>
-        <sdk:description>USB Driver for Windows, revision 7</sdk:description>
+        <sdk:revision>8</sdk:revision>
+        <sdk:description>USB Driver for Windows, revision 8</sdk:description>
         <sdk:desc-url>http://developer.android.com/</sdk:desc-url>
         <sdk:uses-license ref="android-sdk-license"/>
         <sdk:archives>
             <sdk:archive os="windows">
-                <sdk:size>8681704</sdk:size>
-                <sdk:checksum type="sha1">147c339fde22f98ae41b15349a8303d39a2cf6e5</sdk:checksum>
-                <sdk:url>usb_driver_r07-windows.zip</sdk:url>
+                <sdk:size>8682230</sdk:size>
+                <sdk:checksum type="sha1">2b2f91098a984a865a70f0bd841a843fb54462fc</sdk:checksum>
+                <sdk:url>usb_driver_r08-windows.zip</sdk:url>
             </sdk:archive>
         </sdk:archives>
     </sdk:extra>
@@ -901,14 +966,14 @@ August 15, 2011
         <sdk:vendor-display>Google Inc.</sdk:vendor-display>
         <sdk:name-display>Google AdMob Ads SDK</sdk:name-display>
         <sdk:path>admob_ads_sdk</sdk:path>
-        <sdk:revision>9</sdk:revision>
+        <sdk:revision>11</sdk:revision>
         <sdk:description>AdMob Ads SDK</sdk:description>
         <sdk:desc-url>https://developers.google.com/mobile-ads-sdk/docs/</sdk:desc-url>
         <sdk:archives>
             <sdk:archive os="any">
-                <sdk:size>701181</sdk:size>
-                <sdk:checksum type="sha1">fae3ac1579c9c5cc024ea0d33ed4a18d1d2cc783</sdk:checksum>
-                <sdk:url>https://dl-ssl.google.com/googleadmobadssdk/googleadmobadssdkandroid-6.3.0.zip</sdk:url>
+                <sdk:size>704512</sdk:size>
+                <sdk:checksum type="sha1">0102859d9575baa0bf4fd5eb422af2ad0fe6cb82</sdk:checksum>
+                <sdk:url>https://dl-ssl.google.com/googleadmobadssdk/googleadmobadssdkandroid-6.4.1.zip</sdk:url>
             </sdk:archive>
         </sdk:archives>
         <sdk:uses-license ref="android-sdk-license"/>
@@ -919,14 +984,14 @@ August 15, 2011
         <sdk:vendor-display>Google Inc.</sdk:vendor-display>
         <sdk:name-display>Google Analytics App Tracking SDK</sdk:name-display>
         <sdk:path>analytics_sdk_v2</sdk:path>
-        <sdk:revision>2</sdk:revision>
+        <sdk:revision>3</sdk:revision>
         <sdk:description>Analytics App Tracking SDK</sdk:description>
         <sdk:desc-url>http://developers.google.com/analytics/devguides/collection/</sdk:desc-url>
         <sdk:archives>
             <sdk:archive os="any">
-                <sdk:size>205143</sdk:size>
-                <sdk:checksum type="sha1">c8e6635b95373d3ea5a7bc9f77850877e4be98e9</sdk:checksum>
-                <sdk:url>GoogleAnalyticsAndroid_2.0beta4.1.zip</sdk:url>
+                <sdk:size>211432</sdk:size>
+                <sdk:checksum type="sha1">dc14026bf0ce78315cb5dd00552607de0894de83</sdk:checksum>
+                <sdk:url>https://dl.google.com/gaformobileapps/GoogleAnalyticsAndroid_2.0beta5.zip</sdk:url>
             </sdk:archive>
         </sdk:archives>
         <sdk:uses-license ref="android-sdk-license"/>
@@ -953,10 +1018,10 @@ August 15, 2011
     <sdk:extra>
         <sdk:vendor-id>google</sdk:vendor-id>
         <sdk:vendor-display>Google Inc.</sdk:vendor-display>
-        <sdk:name-display>Google Cloud Messaging for Android Library</sdk:name-display>
+        <sdk:name-display>[Deprecated] Google Cloud Messaging for Android Library</sdk:name-display>
         <sdk:path>gcm</sdk:path>
         <sdk:revision>3</sdk:revision>
-        <sdk:description>Google Cloud Messaging for Android library and sample code</sdk:description>
+        <sdk:description>GCM library has been moved to Google Play Services (com.google.android.gms.gcm) and this standalone version is no longer supported</sdk:description>
         <sdk:desc-url>https://developers.google.com/android/gcm/index</sdk:desc-url>
         <sdk:archives>
             <sdk:archive os="any">

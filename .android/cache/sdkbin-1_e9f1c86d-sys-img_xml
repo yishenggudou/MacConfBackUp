@@ -2,7 +2,7 @@
 * Copyright (C) 2012 The Android Open Source Project * * Licensed under the Apache License, version 2.0 (the "License"); * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * * http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the License for the specific language governing permissions and * limitations under the License.
 -->
 <sdk:sdk-sys-img xmlns:sdk="http://schemas.android.com/sdk/android/sys-img/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<!-- TEMPORARY INTEL SECTION -->
+
 <sdk:license id="intel-android-sysimage-license" type="text">
 <![CDATA[
 Intel Corporation Internal Evaluation License Agreement for x86 Android* System Images for Android Software Development Kit (SDK)
@@ -73,53 +73,57 @@ EXCEPT AS PROVIDED HEREIN, NO OTHER LICENSE, EXPRESS OR IMPLIED, BY ESTOPPEL OR 
 ANY PRE-RELEASE MATERIALS ARE NON-QUALIFIED AND, AS SUCH, ARE PROVIDED POSSIBLY WITH FAULTS
 ]]>
 </sdk:license>
+
 <!-- SYSTEM IMAGES ........................ -->
+
 <sdk:system-image>
-<sdk:revision>1</sdk:revision>
-<sdk:description>Android SDK Platform 2.3.7</sdk:description>
-<sdk:api-level>10</sdk:api-level>
-<sdk:abi>x86</sdk:abi>
-<sdk:uses-license ref="intel-android-sysimage-license"/>
-<sdk:archives>
-<sdk:archive arch="any" os="any">
-<sdk:size>56188210</sdk:size>
-<sdk:checksum type="sha1">8e941e524ef81e38969fe276643232c8daf5458d</sdk:checksum>
-<sdk:url>sysimg_x86-10_r01.zip</sdk:url>
-</sdk:archive>
-</sdk:archives>
-</sdk:system-image>
-<sdk:system-image>
-<sdk:revision>1</sdk:revision>
-<sdk:description>Android SDK Platform 4.0.4</sdk:description>
-<sdk:api-level>15</sdk:api-level>
-<sdk:abi>x86</sdk:abi>
-<sdk:uses-license ref="intel-android-sysimage-license"/>
-<sdk:archives>
-<sdk:archive arch="any" os="any">
-<sdk:size>112619605</sdk:size>
-<sdk:checksum type="sha1">d540325952e0f097509622b9e685737584b83e40</sdk:checksum>
-<sdk:url>sysimg_x86-15_r01.zip</sdk:url>
-</sdk:archive>
-</sdk:archives>
-</sdk:system-image>
-<sdk:system-image>
-<sdk:revision>1</sdk:revision>
-<sdk:description>Android SDK Platform 4.1.1</sdk:description>
-<sdk:api-level>16</sdk:api-level>
-<sdk:abi>x86</sdk:abi>
-<sdk:uses-license ref="intel-android-sysimage-license"/>
-<sdk:archives>
-<sdk:archive arch="any" os="any">
-<sdk:size>131840348</sdk:size>
-<sdk:checksum type="sha1">9d35bcaa4f9b40443941f32b8a50337f413c021a</sdk:checksum>
-<sdk:url>sysimg_x86-16_r01.zip</sdk:url>
-</sdk:archive>
-</sdk:archives>
+    <sdk:description>Android SDK Platform 2.3.7</sdk:description>
+    <sdk:revision>2</sdk:revision>
+    <sdk:api-level>10</sdk:api-level>
+    <sdk:abi>x86</sdk:abi>
+    <sdk:uses-license ref="intel-android-sysimage-license"/>
+    <sdk:archives>
+      <sdk:archive arch="any" os="any">
+        <sdk:size>55463895</sdk:size>
+        <sdk:checksum type="sha1">34e2436f69606cdfe35d3ef9112f0c64e3ff021d</sdk:checksum>
+        <sdk:url>sysimg_x86-10_r02.zip</sdk:url>
+      </sdk:archive>
+    </sdk:archives>
 </sdk:system-image>
 
 <sdk:system-image>
+    <sdk:description>Android SDK Platform 4.0.4</sdk:description>
     <sdk:revision>1</sdk:revision>
+    <sdk:api-level>15</sdk:api-level>
+    <sdk:abi>x86</sdk:abi>
+    <sdk:uses-license ref="intel-android-sysimage-license"/>
+    <sdk:archives>
+      <sdk:archive arch="any" os="any">
+        <sdk:size>112619605</sdk:size>
+        <sdk:checksum type="sha1">d540325952e0f097509622b9e685737584b83e40</sdk:checksum>
+        <sdk:url>sysimg_x86-15_r01.zip</sdk:url>
+      </sdk:archive>
+    </sdk:archives>
+</sdk:system-image>
+
+<sdk:system-image>
+    <sdk:description>Android SDK Platform 4.1.1</sdk:description>
+    <sdk:revision>1</sdk:revision>
+    <sdk:api-level>16</sdk:api-level>
+    <sdk:abi>x86</sdk:abi>
+    <sdk:uses-license ref="intel-android-sysimage-license"/>
+    <sdk:archives>
+      <sdk:archive arch="any" os="any">
+        <sdk:size>131840348</sdk:size>
+        <sdk:checksum type="sha1">9d35bcaa4f9b40443941f32b8a50337f413c021a</sdk:checksum>
+        <sdk:url>sysimg_x86-16_r01.zip</sdk:url>
+      </sdk:archive>
+    </sdk:archives>
+</sdk:system-image>
+
+<sdk:system-image>
     <sdk:description>Android SDK Platform 4.2</sdk:description>
+    <sdk:revision>1</sdk:revision>
     <sdk:api-level>17</sdk:api-level>
     <sdk:abi>x86</sdk:abi>
     <sdk:uses-license ref="intel-android-sysimage-license"/>
@@ -128,6 +132,21 @@ ANY PRE-RELEASE MATERIALS ARE NON-QUALIFIED AND, AS SUCH, ARE PROVIDED POSSIBLY 
             <sdk:size>138799122</sdk:size>
             <sdk:checksum type="sha1">ddb3313e8dcd07926003f7b828eafea1115ea35b</sdk:checksum>
             <sdk:url>sysimg_x86-17_r01.zip</sdk:url>
+        </sdk:archive>
+    </sdk:archives>
+</sdk:system-image>
+
+<sdk:system-image>
+    <sdk:description>Android SDK Platform 4.3</sdk:description>
+    <sdk:revision>1</sdk:revision>
+    <sdk:api-level>18</sdk:api-level>
+    <sdk:abi>x86</sdk:abi>
+    <sdk:uses-license ref="intel-android-sysimage-license"/>
+    <sdk:archives>
+        <sdk:archive arch="any" os="any">
+            <sdk:size>155656419</sdk:size>
+            <sdk:checksum type="sha1">f11bc9fccd3e7e46c07d8b26e112a8d0b45966c1</sdk:checksum>
+            <sdk:url>sysimg_x86-18_r01.zip</sdk:url>
         </sdk:archive>
     </sdk:archives>
 </sdk:system-image>
