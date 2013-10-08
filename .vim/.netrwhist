@@ -1,6 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Volumes/MACEXT/GitHub/kivy/examples/rstdoc/doc/sources'
-let g:netrw_dirhist_2='/Volumes/MACEXT/Gitwork/yishenggudou.github.com/blog/source'
-let g:netrw_dirhist_3='/Volumes/MACEXT/Gitwork/yishenggudou.github.com/blog/source/notes'
-let g:netrw_dirhist_4='/Volumes/MACEXT/Gitwork/yishenggudou.github.com/blog/source'
+let g:netrw_dirhist_cnt =0
