@@ -137,7 +137,6 @@ set ofu=syntaxcomplete#Complete
 let php_sql_query=1
 let php_htmlInStrings=1
 let g:php_folding=2
-set foldmethod=syntax
 
 " run file with PHP CLI (CTRL-M)
 :autocmd FileType php noremap <C-M> :w!<CR>:!/usr/bin/php %<CR>
