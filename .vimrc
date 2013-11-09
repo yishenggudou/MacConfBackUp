@@ -126,6 +126,25 @@ autocmd BufNewFile *.py    0r ~/.vim/template/pytemplate.py
 autocmd BufNewFile *.sh    0r ~/.vim/template/myshell.sh
 autocmd BufNewFile *.js    0r ~/.vim/template/myjs.js
 autocmd BufNewFile *.rst    0r ~/.vim/template/my.rst
+
+
+" PHP Autocomplete
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+set ofu=syntaxcomplete#Complete
+
+" You might also find this useful
+" PHP Generated Code Highlights (HTML & SQL)
+let php_sql_query=1
+let php_htmlInStrings=1
+let g:php_folding=2
+set foldmethod=syntax
+
+" run file with PHP CLI (CTRL-M)
+:autocmd FileType php noremap <C-M> :w!<CR>:!/usr/bin/php %<CR>
+
+" PHP parser check (CTRL-L)
+:autocmd FileType php noremap <C-L> :!/usr/bin/php -l %<CR>
+
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 "autocmd BufWritePost *.py call Flake8()
 set paste
