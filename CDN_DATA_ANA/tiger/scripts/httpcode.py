@@ -34,7 +34,7 @@ def main():
         o.start(day[:8]+'2000')
         o.dataclean(0)
         o.end(day[:8]+'2359')
-        o.get('request')
+        o.get('requests')
         o.pageby('httpcode')
         vv = o.all()
         rst = {}

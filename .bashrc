@@ -47,3 +47,5 @@ export ANDROIDNDKVER=r8c
 export ANDROIDAPI=14
 export PATH=$ANDROIDNDK:$ANDROIDSDK/platform-tools:$ANDROIDSDK/tools:$PATH
 alias linode='ssh root@106.186.117.23'
+export PYTHONPATH=$PYTHONPATH:/Users/timger/django-social-auth/
+

@@ -19,6 +19,7 @@ sys.path.append(os.path.join(DIR_PATH,'../pages'))
 
 import db
 import costing_detail_fix
+import costing_chart
 import jdata
 from urllib2 import urlopen
 import json
@@ -39,5 +40,15 @@ def main():
             db_['cost'].save(_)
     
 
+def cache():
+    yesterday = jdata.DateQuick.quickdate.tostr(jdata.DateQuick.quickdate.daysago(1))[:8]
+    yewus = json.loads(urlopen('http://10.182.63.61:28889/api/yewulist/').read())
+    p = os.path.join(DIR_PATH, '../cachebuff/page/chart_costs/', yesterday[:8])
+    print p
+    os.makedirs(p)
+    for yewu in yewus: 
+        costing_chart.v_area_cost(yesterday[:8], yewu)
+
 if __name__ == "__main__":
+   cache()
    main() 

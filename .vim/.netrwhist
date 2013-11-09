@@ -1,2 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Volumes/MACEXT/Gitwork/yishenggudou.github.com/blog/source'
+let g:netrw_dirhist_2='/Volumes/MACEXT/GitHub/angular-highcharts-directive/src/directives'
+let g:netrw_dirhist_3='/Volumes/MACEXT/GitHub/angular-highcharts-directive/sample/views'
+let g:netrw_dirhist_4='/Users/timger/CDN_DATA_ANA/tiger/pages'
+let g:netrw_dirhist_5='/Volumes/MACEXT/Gitwork/yishenggudou.github.com/blog/source'
+let g:netrw_dirhist_6='/Users/timger/django-social-auth/example/app'
+let g:netrw_dirhist_7='/Volumes/MACEXT/GitHub/highcharts-python'
+let g:netrw_dirhist_8='/Users/timger/CDN_DATA_ANA/tiger/static/app/controllers'
+let g:netrw_dirhist_9='/Volumes/MACEXT/Gitwork/yishenggudou.github.com/blog/source'
