@@ -1,4 +1,0 @@
-def tt(char* str_):
-    cdef char c
-    for c in str_:
-        print chr(c)
