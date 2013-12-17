@@ -9,10 +9,6 @@
 " for MS-DOS and Win32: $VIM\_vimrc
 " for OpenVMS: sys$login:.vimrc
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-finish
-endif
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -26,16 +22,7 @@ set number
 
 
 
-" vim 自动补全 Python 代码
-" 来自http://vim.sourceforge.net/scripts/script.php?script_id=850
-autocmd FileType python set complete+=k~/.vim/tools/pydiction
 
-
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
 
 "Set a four-space tab indent width in order to prefer codeing style for
 "Python
@@ -121,10 +108,6 @@ hi clear
 if exists("syntax_on")
 syntax reset
 endif
-filetype plugin on
-autocmd FileType python set ft=python.django " For SnipMate
-autocmd FileType html set ft=htmldjango.html " For SnipMate
-autocmd FileType tmpl set ft=htmldjango.html " For SnipMate
 
 autocmd BufNewFile *.py    0r ~/.vim/template/pytemplate.py
 autocmd BufNewFile *.sh    0r ~/.vim/template/myshell.sh
@@ -132,42 +115,111 @@ autocmd BufNewFile *.js    0r ~/.vim/template/myjs.js
 autocmd BufNewFile *.rst    0r ~/.vim/template/my.rst
 
 
-" PHP Autocomplete
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-set ofu=syntaxcomplete#Complete
 
-" You might also find this useful
-" PHP Generated Code Highlights (HTML & SQL)
-let php_sql_query=1
-let php_htmlInStrings=1
-let g:php_folding=2
 
-" run file with PHP CLI (CTRL-M)
-:autocmd FileType php noremap <C-M> :w!<CR>:!/usr/bin/php %<CR>
-
-" PHP parser check (CTRL-L)
-:autocmd FileType php noremap <C-L> :!/usr/bin/php -l %<CR>
 
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 "autocmd BufWritePost *.py call Flake8()
 set paste
 
-"https://github.com/tpope/vim-pathogen
-call pathogen#infect()
-set cursorline
-:helptags ~/.vim/doc
-set syntax=rest
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
-match OverLength /\%81v.\+/
+
+highlight OverLength ctermbg=green ctermfg=white guibg=#592929 
+match OverLength /\%100v.\+/
 
 command Scr execute "!/Users/timger/scripts/Scr.py|tail -n 1"
 let g:jedi#auto_initialization = 0
 
-"if !has('python')
-"    echo "Error: Required vim compiled with +python"
-"    finish
-"else
-    "echo "python has installed"
-    "finish
-"endif
 
+
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My bundles here:
+"
+" original repos on GitHub
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+
+
+Bundle 'Lokaltog/vim-powerline.git'
+set laststatus=2
+
+Bundle 'bling/vim-airline'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+function! AccentDemo()
+  let keys = ['a','b','c','d','e','f','g','h']
+  for k in keys
+    call airline#parts#define_text(k, k)
+  endfor
+  call airline#parts#define_accent('a', 'red')
+  call airline#parts#define_accent('b', 'green')
+  call airline#parts#define_accent('c', 'blue')
+  call airline#parts#define_accent('d', 'yellow')
+  call airline#parts#define_accent('e', 'orange')
+  call airline#parts#define_accent('f', 'purple')
+  call airline#parts#define_accent('g', 'bold')
+  call airline#parts#define_accent('h', 'italic')
+  let g:airline_section_a = airline#section#create(keys)
+endfunction
+autocmd VimEnter * call AccentDemo()
+let g:airline_theme             = 'zenburn'
+
+Bundle 'hdima/python-syntax'
+
+
+
+Bundle 'kien/ctrlp.vim.git'
+let g:ctrlp_max_height = 30
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=*/coverage/*
+
+Bundle 'klen/python-mode'
+map <Leader>g :call RopeGotoDefinition()<CR>
+let ropevim_enable_shortcuts = 1
+let g:pymode_rope_goto_def_newwin = "vnew"
+let g:pymode_rope_extended_complete = 1
+let g:pymode_breakpoint = 0
+let g:pymode_syntax = 1
+let g:pymode_syntax_builtin_objs = 0
+let g:pymode_syntax_builtin_funcs = 0
+map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+
+
+Bundle 'tpope/vim-pathogen'
+call pathogen#infect()
+set cursorline
+:helptags ~/.vim/doc
+set syntax=rest
+
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+
+" non-GitHub repos
+Bundle 'git://git.wincent.com/command-t.git'
+" Git repos on your local machine (i.e. when working on your own plugin)
+" Bundle 'file:///Users/timger/path/to/plugin'
+" ...
+
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install (update) bundles
+" :BundleSearch(!) foo - search (or refresh cache first) for foo
+" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle commands are not allowed.
