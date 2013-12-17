@@ -11,4 +11,7 @@ MAC电脑的一些配置备份
     git pull
     git checkout master -f
 
+log
+----------------
+1. 20131217 修改为 `https://github.com/gmarik/vundle`  管理模式
 
