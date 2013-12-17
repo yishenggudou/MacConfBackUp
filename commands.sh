@@ -38,15 +38,16 @@ downloadallsite(){
 }
 
 push_auto_branch() {
-    branch=`git branch|head -1|awk '{print $2}'`
-    echo "push branch $branch"
-    git push origin $branch
+    branch=`git branch|grep '\*'|head -1|awk '{print $2}'`
+    echo "push branch ${branch}"
+    git push origin ${branch}
 }
 
 pull_auto_branch() {
-    branch=`git branch|head -1|awk '{print $2}'`
-    echo "git pull origin $branch"
-    git pull origin $branch
+    branch=`git branch|grep '\*'|head -1|awk '{print $2}'`
+    echo ${branch}
+    echo "git pull origin ${branch}"
+    git pull origin ${branch}
 }
 
 
