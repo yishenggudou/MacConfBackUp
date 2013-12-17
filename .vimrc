@@ -31,7 +31,11 @@ set number
 autocmd FileType python set complete+=k~/.vim/tools/pydiction
 
 
-
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 "Set a four-space tab indent width in order to prefer codeing style for
 "Python
@@ -159,10 +163,11 @@ match OverLength /\%81v.\+/
 command Scr execute "!/Users/timger/scripts/Scr.py|tail -n 1"
 let g:jedi#auto_initialization = 0
 
-if !has('python')
-    echo "Error: Required vim compiled with +python"
-    finish
+"if !has('python')
+"    echo "Error: Required vim compiled with +python"
+"    finish
 "else
     "echo "python has installed"
     "finish
-endif
+"endif
+

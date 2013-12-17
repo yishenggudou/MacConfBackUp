@@ -11,3 +11,4 @@
 	trustExitCode = true
 [color]
 	ui = auto
+	diff = true

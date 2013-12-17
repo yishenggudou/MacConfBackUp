@@ -1,8 +1,0 @@
-optOut: false
-lastUpdateCheck: 1375002663290
-update:
-  latest: 1.0.0
-  current: 0.10.0
-  type: major
-  date: '2013-07-23T00:13:33.288Z'
-  name: bower
