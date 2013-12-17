@@ -207,11 +207,22 @@ set syntax=rest
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 
+Bundle "iyf/AuthorInfo"
+
+let g:vimrc_author='timger' 
+let g:vimrc_email='yishenggudou@gmail.com' 
+let g:vimrc_homepage='http://www.timger.info' 
+
+
 " non-GitHub repos
 Bundle 'git://git.wincent.com/command-t.git'
 " Git repos on your local machine (i.e. when working on your own plugin)
 " Bundle 'file:///Users/timger/path/to/plugin'
 " ...
+
+Bundle "jnwhiteh/vim-golang"
+Bundle "kevinw/pyflakes-vim"
+
 
 filetype plugin indent on     " required!
 "
