@@ -150,6 +150,12 @@ Bundle 'tpope/vim-rails.git'
 
 Bundle 'Lokaltog/vim-powerline.git'
 set laststatus=2
+"powerline{
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
+"}
 
 Bundle 'bling/vim-airline'
 
@@ -202,6 +208,10 @@ call pathogen#infect()
 set cursorline
 :helptags ~/.vim/doc
 set syntax=rest
+
+
+
+Bundle 'scrooloose/nerdtree'
 
 " vim-scripts repos
 Bundle 'L9'
