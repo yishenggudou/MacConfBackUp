@@ -50,26 +50,26 @@ pull_auto_branch() {
     git pull origin ${branch}
 }
 
+extract () {
+  #http://www.quora.com/What-are-some-useful-bash_profile-and-bashrc-tips
+  if [ -f $1 ] ; then
+      case $1 in
+          *.tar.bz2)   tar xvjf $1    ;;
+          *.tar.gz)    tar xvzf $1    ;;
+          *.bz2)       bunzip2 $1     ;;
+          *.rar)       rar x $1       ;;
+          *.gz)        gunzip $1      ;;
+          *.tar)       tar xvf $1     ;;
+          *.tbz2)      tar xvjf $1    ;;
+          *.tgz)       tar xvzf $1    ;;
+          *.zip)       unzip $1       ;;
+          *.Z)         uncompress $1  ;;
+          *.7z)        7z x $1        ;;
+          *)           echo "don't know how to extract '$1'..." ;;
+      esac
+  else
+      echo "'$1' is not a valid file!"
+  fi
+}
 
-alias kill_chrome="ps aux|grep Chrome|grep -v grep|awk '{print \$2}'|xargs kill"
-alias kill_zoc="ps aux|grep zoc|grep -v grep|awk '{print \$2}'|xargs kill"
-alias kill_xcode="ps aux|grep Xcode|awk '{print \$2}'|xargs kill"
-alias kill_dict="ps aux|grep YoudaoDict|awk '{print \$2}'|xargs kill"
-alias nib2objc="/Users/timger/Stegosaurus/tools/nib2objc.17\ PM/usr/local/bin/nib2objc"
 
-alias django_run="python manage.py  runserver"
-alias wget_all_site="wget -r -np -nd "
-
-
-#python
-alias python_mprofile="python –m profile"
-
-
-#python
-alias cms_python="/Volumes/MACEXT/sitecms/bin/python"
-alias cms_pip="/Volumes/MACEXT/sitecms/bin/pip"
-alias cms_django_admin="/Volumes/MACEXT/sitecms/bin/django-admin.py"
-
-
-#EMP
-export DATATMPDIR='/Volumes/TIMGER/DATATMP'

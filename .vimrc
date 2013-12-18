@@ -150,6 +150,12 @@ Bundle 'tpope/vim-rails.git'
 
 Bundle 'Lokaltog/vim-powerline.git'
 set laststatus=2
+"powerline{
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set t_Co=256
+let g:Powerline_symbols = 'fancy'
+"}
 
 Bundle 'bling/vim-airline'
 
@@ -203,15 +209,30 @@ set cursorline
 :helptags ~/.vim/doc
 set syntax=rest
 
+
+
+Bundle 'scrooloose/nerdtree'
+
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+
+Bundle "iyf/AuthorInfo"
+
+let g:vimrc_author='timger' 
+let g:vimrc_email='yishenggudou@gmail.com' 
+let g:vimrc_homepage='http://www.timger.info' 
+
 
 " non-GitHub repos
 Bundle 'git://git.wincent.com/command-t.git'
 " Git repos on your local machine (i.e. when working on your own plugin)
 " Bundle 'file:///Users/timger/path/to/plugin'
 " ...
+
+Bundle "jnwhiteh/vim-golang"
+Bundle "kevinw/pyflakes-vim"
+
 
 filetype plugin indent on     " required!
 "

@@ -1,0 +1,71 @@
+alias httpserver="python -m SimpleHTTPServer"
+
+#git 命令别名
+alias clone="git clone"
+alias git_push="git push origin master"
+alias push="git push origin master"
+alias git_commit="git commit -m 'commit'"
+alias git_commit_msg="git commit -a -m"
+alias git_commit_auto="git commit -a -m '脚本自动提交不知道写什么'"
+alias git_cadd="git commit -a"
+alias git_remove_control="git rm --cached"
+alias git_set_user="git config user.name"
+alias git_set_pwd="git config user.password "
+alias pull='git pull'
+alias git_reset="git reset --hard HEAD"
+alias git_iadd="git add -i"
+alias git_list_log="git log"
+alias git_list_branch="git branch -a"
+alias git_help_online="open http://learnxinyminutes.com/docs/zh-cn/git-cn/"
+
+# http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
+alias git_flow_start_feature="git flow feature start "
+alias git_flow_finish_feature="git flow feature finish  "
+alias git_flow_publish_feature="git flow feature publish  "
+alias git_flow_pull_feature="git flow feature pull  "
+alias git_flow_init="git flow init"
+
+alias git_flow_start_release="git flow release start RELEASE"
+alias git_flow_publish_release="git flow release publish RELEASE"
+alias git_flow_finish_release="git flow release finish  RELEASE"
+alias git_help_flow_online="open http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html"
+
+alias git_flow_start_hotfix="git flow hotfix start "
+alias git_flow_finish_hotfix="git flow hotfix finish "
+
+#pip
+alias pip_init_requirements="pip freeze > requirements.txt"
+alias pip_example_git="echo pip install git+git://github.com/myuser/foo.git@v123"
+
+
+alias git_remote_add="git remote add origin"
+
+#redis
+alias redis_realnode="redis-cli -h 10.181.153.163"
+
+
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome &"
+
+
+
+alias kill_chrome="ps aux|grep Chrome|grep -v grep|awk '{print \$2}'|xargs kill"
+alias kill_zoc="ps aux|grep zoc|grep -v grep|awk '{print \$2}'|xargs kill"
+alias kill_xcode="ps aux|grep Xcode|awk '{print \$2}'|xargs kill"
+alias kill_dict="ps aux|grep YoudaoDict|awk '{print \$2}'|xargs kill"
+alias nib2objc="/Users/timger/Stegosaurus/tools/nib2objc.17\ PM/usr/local/bin/nib2objc"
+
+alias django_run="python manage.py  runserver"
+alias wget_all_site="wget -r -np -nd "
+
+
+#python
+alias python_mprofile="python –m profile"
+
+
+#python
+alias cms_python="/Volumes/MACEXT/sitecms/bin/python"
+alias cms_pip="/Volumes/MACEXT/sitecms/bin/pip"
+alias cms_django_admin="/Volumes/MACEXT/sitecms/bin/django-admin.py"
+
+
+#EMP
