@@ -233,6 +233,10 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle "jnwhiteh/vim-golang"
 Bundle "kevinw/pyflakes-vim"
 
+" RST writer
+Bundle "nvie/vim-rst-tables"
+Bundle "Rykka/riv.vim"
+
 
 filetype plugin indent on     " required!
 "
