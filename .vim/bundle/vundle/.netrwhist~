@@ -1,5 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/timger/yishenggudou.github.com/blog/source'
 let g:netrw_dirhist_2='/Users/timger/cdn/.git'
 let g:netrw_dirhist_3='/Users/timger/cdn/scripts'
+let g:netrw_dirhist_4='/Users/timger/cdn/logger/logger'
+let g:netrw_dirhist_5='/Users/timger/cdn/letvlog/letvlog'
+let g:netrw_dirhist_6='/Users/timger/GitHub/Collapse/Collapse/collapse'
+let g:netrw_dirhist_7='/Users/timger/yishenggudou.github.com/blog/source'
+let g:netrw_dirhist_8='/Users/timger/cdn/dashboard/datatype'

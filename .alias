@@ -18,6 +18,9 @@ alias git_list_log="git log"
 alias git_list_branch="git branch -a"
 alias git_help_online="open http://learnxinyminutes.com/docs/zh-cn/git-cn/"
 
+##status
+alias git_status_remote="git remote show origin"
+
 # http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
 alias git_flow_start_feature="git flow feature start "
 alias git_flow_finish_feature="git flow feature finish  "
@@ -85,3 +88,21 @@ svn_import="svn import"
 
 #tree
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+
+#paster
+alias paster_create_from_timgerapp="paster create -t timgerapp"
+
+#tools
+alias readme_open="vim README.rst"
+
+#前端
+alias yo_angular="yo angular"
+alias yo_angular_controller="yo angular:controller"
+alias yo_angular_directive="yo angular:directive"
+alias yo_angular_view="yo angular:view"
+alias yo_angular_help="open https://github.com/yeoman/generator-angular"
+alias yo_create_mobileapp="ionic start"
+
+#guanji
+alias shutdownnow="sudo shutdown -h now"
