@@ -114,6 +114,8 @@ autocmd BufNewFile *.sh    0r ~/.vim/template/myshell.sh
 autocmd BufNewFile *.js    0r ~/.vim/template/myjs.js
 autocmd BufNewFile *.rst    0r ~/.vim/template/my.rst
 
+autocmd FileType javascript set shiftwidth=2|set expandtab
+
 
 
 
@@ -146,6 +148,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+
+Bundle 'tshirtman/vim-cython'
 
 
 Bundle 'Lokaltog/vim-powerline.git'
