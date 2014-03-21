@@ -22,15 +22,13 @@
 import os
 import sys
 import logging
-import itertools
-import shelve
-#http://pythonhosted.org/an_example_pypi_project/sphinx.html#full-code-example
-#http://pythonhosted.org/an_example_pypi_project/pkgcode.html
-
 DIR_PATH = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
+if not DIR_PATH in sys.path:
+    sys.path.append(DIR_PATH)
+parent_dir = os.path.abspath(os.path.join(DIR_PATH, '..'))
+if not parent_dir in sys.path:
+    sys.path.append(parent_dir)
 NAME_FILE = os.path.relpath(__file__)
-
-db = shelve.open(os.path.join(DIR_PATH,NAME_FILE.split('/')[-1].split('.')[0]+'.db'))
 
 logger = logging.getLogger('octopus.libs.%s' %NAME_FILE)
 logger.setLevel(logging.DEBUG)
@@ -181,7 +179,7 @@ class xx:
     - average1m(): average memory use, over the last minute
     - average10m(): average memory use, over the last ten minutes
     - average1h(): average memory use, over the last hour
-    
+
     write some doctest like this
     >>> from StringIO import StringIO
     >>> list(network_segment(StringIO(_sample_whois)))
@@ -190,10 +188,10 @@ class xx:
     def __init__(self,**args):
         pass
 
-    def __getitem__(self, key): 
+    def __getitem__(self, key):
         return self.data[key]
 
-    def __setitem__(self, key, item): 
+    def __setitem__(self, key, item):
         self.data[key] = item
 
     def __repr__(self):

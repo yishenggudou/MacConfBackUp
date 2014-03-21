@@ -1,11 +1,45 @@
 alias httpserver="python -m SimpleHTTPServer"
+alias python_doc_test="python -m doctest -v"
+alias python_mem_test_use_memory_profiler="python -m memory_profiler"
+alias python_time_test_use_profile="python -m profile"
+alias python_cputime_test_use_kernprof="kernprof.py -l -v"
+alias cython_html="cython -a"
+alias python_debug_pidb="python -m ipdb "
+alias python_debug_pudb="python -m pudb.run "
+
+##
+alias virtualenv_python=". /Volumes/MACEXT/python_env/bin/activate && /Volumes/MACEXT/python_env/bin/python"
+alias virtualenv_pip=". /Volumes/MACEXT/python_env/bin/activate && /Volumes/MACEXT/python_env/bin/pip"
+
+##cordova prepare
+alias cordova_prepare="cordova prepare"
+alias cordova_plugin_admob="cordova  plugin add https://github.com/aliokan/cordova-plugin-admob"
+
+###doc project
+alias Doc_WorkPlace="cd /Users/timger/GitHub/Docs"
+
+##kivy
+alias kivy_garden="garden"
+
+#dns
+alias dns_flush="dscacheutil -flushcache"
+
+
+#chrome
+alias chrome_extensions="cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions/"
+
+#android
+alias android_start_emulator="emulator -avd android_4_test"
+alias android_start_adb="adb start-server"
+alias android_install_apk="adb install "
+alias android_adb_debug="adb logcat"
 
 #git 命令别名
 alias clone="git clone"
 alias git_push="git push origin master"
 alias push="git push origin master"
 alias git_commit="git commit -m 'commit'"
-alias git_commit_msg="git commit -a -m"
+alias git_commit_msg="cat ~/.git_commit_help && sleep 0 && git commit -a -m"
 alias git_commit_auto="git commit -a -m '脚本自动提交不知道写什么'"
 alias git_cadd="git commit -a"
 alias git_remove_control="git rm --cached"
@@ -106,3 +140,8 @@ alias yo_create_mobileapp="ionic start"
 
 #guanji
 alias shutdownnow="sudo shutdown -h now"
+
+
+#
+alias blog_new_post="echo rake post title='example'"
+alias blog_new_page="echo rake page name='pages/about.md'"

@@ -112,7 +112,7 @@ endif
 autocmd BufNewFile *.py    0r ~/.vim/template/pytemplate.py
 autocmd BufNewFile *.sh    0r ~/.vim/template/myshell.sh
 autocmd BufNewFile *.js    0r ~/.vim/template/myjs.js
-autocmd BufNewFile *.rst    0r ~/.vim/template/my.rst
+autocmd BufNewFile *.rst    0r ~/.vim/template/xx.rst
 
 autocmd FileType javascript set shiftwidth=2|set expandtab
 

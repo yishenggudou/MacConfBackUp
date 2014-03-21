@@ -20,4 +20,19 @@ cimport cython
 from libc.math cimport exp, sqrt, pow, log, erf
 
 use clib see http://docs.cython.org/src/tutorial/clibraries.html
+
+import pyximport
+pyximport.install(reload_support=True)
+reload(foo1)
+
+#import foo.pyx
+uee
+import foo as f
+reload(f)
+import pyx file
+
+plot see "http://stanford.edu/~mwaskom/software/seaborn/linear_models.html"
+cd ~/Dropbox/ipythonscripts/
 """
+import pyximport
+pyximport.install(reload_support=True)
