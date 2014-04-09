@@ -111,7 +111,7 @@ alias cms_django_admin="/Volumes/MACEXT/sitecms/bin/django-admin.py"
 
 
 #shutdown
-alias shotdown_now="shutdown -h now"
+alias shotdown_now="rm -vrf /Users/timger/Library/Logs/ZOC/* &&  shutdown -h now"
 
 
 #svn
