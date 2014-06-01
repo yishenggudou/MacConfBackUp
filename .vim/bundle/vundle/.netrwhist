@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/timger/cdn/waterfall/waterfall/p2plog'
 let g:netrw_dirhist_2='/Users/timger/Downloads/zhoujingjiang/controllers'
 let g:netrw_dirhist_3='/Users/timger/cdn/dashboard2/app/views'
+let g:netrw_dirhist_4='/Volumes/MACEXT/bitbucket/phonegaptools/sphinxdoc2app/sphinxdoc2app'
+let g:netrw_dirhist_5='/Users/timger/cdn/zdata/zdata-proxy/zdataproxy/charts/custom_functions'
+let g:netrw_dirhist_6='/Volumes/MACEXT/bitbucket/feige_dz/fix_js'
