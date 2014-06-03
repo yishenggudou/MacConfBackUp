@@ -1,0 +1,17 @@
+[fix]:
+
+[add]:
+
+[change]:
+
+----------------------
+Fix bug where user can't signup.
+
+[Bug #2873942]
+
+Users were unable to register if they hadn't visited the plans
+and pricing page because we expected that tracking
+information to exist for the logs we create after a user
+signs up.  I fixed this by adding a check to the logger
+to ensure that if that information was not available
+we weren't trying to write it.
