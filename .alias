@@ -152,3 +152,4 @@ alias shutdownnow="sudo shutdown -h now"
 #
 alias blog_new_post="echo rake post title='example'"
 alias blog_new_page="echo rake page name='pages/about.md'"
+alias jar_viewer="jar tvf "
