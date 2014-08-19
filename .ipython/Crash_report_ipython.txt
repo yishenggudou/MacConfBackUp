@@ -1,0 +1,268 @@
+***************************************************************************
+
+IPython post-mortem report
+
+{'commit_hash': '<not found>',
+ 'commit_source': '(none found)',
+ 'ipython_path': '/Library/Python/2.7/site-packages/ipython-0.11-py2.7.egg/IPython',
+ 'ipython_version': '0.11',
+ 'os_name': 'posix',
+ 'platform': 'Darwin-11.3.0-x86_64-i386-64bit',
+ 'sys_executable': '/usr/bin/python',
+ 'sys_platform': 'darwin',
+ 'sys_version': '2.7.1 (r271:86832, Jul 31 2011, 19:30:53) \n[GCC 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2335.15.00)]'}
+
+***************************************************************************
+
+
+
+***************************************************************************
+
+Crash traceback:
+
+---------------------------------------------------------------------------
+SyntaxError                                   Python 2.7.1: /usr/bin/python
+                                                   Fri Jul 20 10:18:16 2012
+A problem occured executing Python code.  Here is the sequence of function
+calls leading up to the error, with the most recent (innermost) call last.
+/usr/local/bin/ipython in <module>()
+      1 #!/usr/bin/python
+      2 # EASY-INSTALL-ENTRY-SCRIPT: 'ipython==0.11','console_scripts','ipython'
+      3 __requires__ = 'ipython==0.11'
+      4 import sys
+      5 from pkg_resources import load_entry_point
+      6 
+      7 sys.exit(
+----> 8    load_entry_point('ipython==0.11', 'console_scripts', 'ipython')()
+        global load_entry_point = <function load_entry_point at 0x10086ae60>
+      9 )
+
+/Library/Python/2.7/site-packages/ipython-0.11-py2.7.egg/IPython/frontend/terminal/ipapp.pyc in launch_new_instance()
+    355         ipython_dir = get_ipython_dir()
+    356     profile_dir = os.path.join(ipython_dir, 'profile_default')
+    357     cl = PyFileConfigLoader(default_config_file_name, profile_dir)
+    358     try:
+    359         config = cl.load_config()
+    360     except IOError:
+    361         # no config found
+    362         config = Config()
+    363     return config
+    364 
+    365 
+    366 def launch_new_instance():
+    367     """Create and run a full blown IPython instance"""
+    368     app = TerminalIPythonApp.instance()
+    369     app.initialize()
+--> 370     app.start()
+    371 
+    372 
+    373 if __name__ == '__main__':
+    374     launch_new_instance()
+
+/Library/Python/2.7/site-packages/ipython-0.11-py2.7.egg/IPython/frontend/terminal/ipapp.pyc in start(self=<IPython.frontend.terminal.ipapp.TerminalIPythonApp object>)
+    329         if gui or self.pylab:
+    330             try:
+    331                 self.log.info("Enabling GUI event loop integration, "
+    332                               "toolkit=%s, pylab=%s" % (gui, self.pylab) )
+    333                 activate(gui)
+    334             except:
+    335                 self.log.warn("Error in enabling GUI event loop integration:")
+    336                 self.shell.showtraceback()
+    337 
+    338     def start(self):
+    339         if self.subapp is not None:
+    340             return self.subapp.start()
+    341         # perform any prexec steps:
+    342         if self.interact:
+    343             self.log.debug("Starting IPython's mainloop...")
+--> 344             self.shell.mainloop()
+    345         else:
+    346             self.log.debug("IPython not interactive...")
+    347 
+    348 
+    349 def load_default_config(ipython_dir=None):
+    350     """Load the default config file from the default ipython_dir.
+    351 
+    352     This is useful for embedded shells.
+    353     """
+    354     if ipython_dir is None:
+    355         ipython_dir = get_ipython_dir()
+    356     profile_dir = os.path.join(ipython_dir, 'profile_default')
+    357     cl = PyFileConfigLoader(default_config_file_name, profile_dir)
+    358     try:
+    359         config = cl.load_config()
+
+/Library/Python/2.7/site-packages/ipython-0.11-py2.7.egg/IPython/frontend/terminal/interactiveshell.pyc in mainloop(self=<IPython.frontend.terminal.interactiveshell.TerminalInteractiveShell object>, display_banner=None)
+    207     #-------------------------------------------------------------------------
+    208     # Mainloop and code execution logic
+    209     #-------------------------------------------------------------------------
+    210 
+    211     def mainloop(self, display_banner=None):
+    212         """Start the mainloop.
+    213 
+    214         If an optional banner argument is given, it will override the
+    215         internally created default banner.
+    216         """
+    217         
+    218         with nested(self.builtin_trap, self.display_trap):
+    219 
+    220             while 1:
+    221                 try:
+--> 222                     self.interact(display_banner=display_banner)
+        global See = undefined
+        global also = undefined
+    223                     #self.interact_with_readline()                
+    224                     # XXX for testing of a readline-decoupled repl loop, call
+    225                     # interact_with_readline above
+    226                     break
+    227                 except KeyboardInterrupt:
+    228                     # this should not be necessary, but KeyboardInterrupt
+    229                     # handling seems rather unpredictable...
+    230                     self.write("\nKeyboardInterrupt in interact()\n")
+    231 
+    232     def interact(self, display_banner=None):
+    233         """Closely emulate the interactive Python console."""
+    234 
+    235         # batch run -> do not interact        
+    236         if self.exit_now:
+    237             return
+
+/Library/Python/2.7/site-packages/ipython-0.11-py2.7.egg/IPython/frontend/terminal/interactiveshell.pyc in interact(self=<IPython.frontend.terminal.interactiveshell.TerminalInteractiveShell object>, display_banner=False)
+    297                      'Because of how pdb handles the stack, it is impossible\n'
+    298                      'for IPython to properly format this particular exception.\n'
+    299                      'IPython will resume normal operation.')
+    300             except:
+    301                 # exceptions here are VERY RARE, but they can be triggered
+    302                 # asynchronously by signal handlers, for example.
+    303                 self.showtraceback()
+    304             else:
+    305                 self.input_splitter.push(line)
+    306                 more = self.input_splitter.push_accepts_more()
+    307                 if (self.SyntaxTB.last_syntax_error and
+    308                     self.autoedit_syntax):
+    309                     self.edit_syntax_error()
+    310                 if not more:
+    311                     source_raw = self.input_splitter.source_raw_reset()[1]
+--> 312                     self.run_cell(source_raw)
+    313                 
+    314         # We are off again...
+    315         __builtin__.__dict__['__IPYTHON__active'] -= 1
+    316 
+    317         # Turn off the exit flag, so the mainloop can be restarted if desired
+    318         self.exit_now = False
+    319 
+    320     def raw_input(self, prompt=''):
+    321         """Write a prompt and read a line.
+    322 
+    323         The returned line does not include the trailing newline.
+    324         When the user enters the EOF key sequence, EOFError is raised.
+    325 
+    326         Optional inputs:
+    327 
+
+/Library/Python/2.7/site-packages/ipython-0.11-py2.7.egg/IPython/core/interactiveshell.pyc in run_cell(self=<IPython.frontend.terminal.interactiveshell.TerminalInteractiveShell object>, raw_cell=u'continue\n', store_history=True)
+   2282             
+   2283                 with self.display_trap:
+   2284                     try:
+   2285                         code_ast = ast.parse(cell, filename=cell_name)
+   2286                     except IndentationError:
+   2287                         self.showindentationerror()
+   2288                         self.execution_count += 1
+   2289                         return None
+   2290                     except (OverflowError, SyntaxError, ValueError, TypeError,
+   2291                             MemoryError):
+   2292                         self.showsyntaxerror()
+   2293                         self.execution_count += 1
+   2294                         return None
+   2295             
+   2296                     self.run_ast_nodes(code_ast.body, cell_name,
+-> 2297                                                         interactivity="last_expr")
+   2298             
+   2299                     # Execute any registered post-execution functions.
+   2300                     for func, status in self._post_execute.iteritems():
+   2301                         if not status:
+   2302                             continue
+   2303                         try:
+   2304                             func()
+   2305                         except:
+   2306                             self.showtraceback()
+   2307                             # Deactivate failing function
+   2308                             self._post_execute[func] = False
+   2309                 
+   2310         if store_history:
+   2311             # Write output to the database. Does nothing unless
+   2312             # history output logging is enabled.
+
+/Library/Python/2.7/site-packages/ipython-0.11-py2.7.egg/IPython/core/interactiveshell.pyc in run_ast_nodes(self=<IPython.frontend.terminal.interactiveshell.TerminalInteractiveShell object>, nodelist=[<_ast.Continue object>], cell_name='<ipython-input-46-c645dea65bb4>', interactivity='none')
+   2342                 interactivity = "none"
+   2343         
+   2344         if interactivity == 'none':
+   2345             to_run_exec, to_run_interactive = nodelist, []
+   2346         elif interactivity == 'last':
+   2347             to_run_exec, to_run_interactive = nodelist[:-1], nodelist[-1:]
+   2348         elif interactivity == 'all':
+   2349             to_run_exec, to_run_interactive = [], nodelist
+   2350         else:
+   2351             raise ValueError("Interactivity was %r" % interactivity)
+   2352             
+   2353         exec_count = self.execution_count
+   2354         
+   2355         for i, node in enumerate(to_run_exec):
+   2356             mod = ast.Module([node])
+-> 2357             code = self.compile(mod, cell_name, "exec")
+   2358             if self.run_code(code):
+   2359                 return True
+   2360 
+   2361         for i, node in enumerate(to_run_interactive):
+   2362             mod = ast.Interactive([node])
+   2363             code = self.compile(mod, cell_name, "single")
+   2364             if self.run_code(code):
+   2365                 return True
+   2366 
+   2367         return False
+   2368     
+   2369     def run_code(self, code_obj):
+   2370         """Execute a code object.
+   2371 
+   2372         When an exception occurs, self.showtraceback() is called to display a
+
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/codeop.pyc in __call__(self=<IPython.core.compilerop.CachingCompiler instance>, source=<_ast.Module object>, filename='<ipython-input-46-c645dea65bb4>', symbol='exec')
+    118     - Raise SyntaxError, ValueError or OverflowError if the command is a
+    119       syntax error (OverflowError and ValueError can be produced by
+    120       malformed literals).
+    121     """
+    122     return _maybe_compile(_compile, source, filename, symbol)
+    123 
+    124 class Compile:
+    125     """Instances of this class behave much like the built-in compile
+    126     function, but if one is used to compile text containing a future
+    127     statement, it "remembers" and compiles all subsequent program texts
+    128     with the statement in force."""
+    129     def __init__(self):
+    130         self.flags = PyCF_DONT_IMPLY_DEDENT
+    131 
+    132     def __call__(self, source, filename, symbol):
+--> 133         codeob = compile(source, filename, symbol, self.flags, 1)
+    134         for feature in _features:
+    135             if codeob.co_flags & feature.compiler_flag:
+    136                 self.flags |= feature.compiler_flag
+    137         return codeob
+    138 
+    139 class CommandCompiler:
+    140     """Instances of this class have __call__ methods identical in
+    141     signature to compile_command; the difference is that if the
+    142     instance compiles program text containing a __future__ statement,
+    143     the instance 'remembers' and compiles all subsequent program texts
+    144     with the statement in force."""
+    145 
+    146     def __init__(self,):
+    147         self.compiler = Compile()
+    148 
+
+SyntaxError: 'continue' not properly in loop (<ipython-input-46-c645dea65bb4>, line 1)
+
+***************************************************************************
+
+History of session input:import subprocessget_ipython().system(u"ls -F ")f=subprocess.Popen(['python','/Users/timger/Downloads/test.py'],shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,)f.stdin.write('sddsdsds')f.communicate('adasdas')f=subprocess.Popen(['python','/Users/timger/Downloads/test.py'],shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE)f.stdin.write('sddsdsds')f.stdin.write('sddsdsds')f.stdin.write('sddsdsds\n')f=subprocess.Popen(['python','/Users/timger/Downloads/test.py'],shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE)f.stdin.write('sddsdsds\n')f.stdin.write('sddsdsds\n')f.communicate()f=subprocess.Popen(['python','/Users/timger/Downloads/test.py'],shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE)f.stdin.write('sddsdsds\n')f.communicate()[0]f = open('/var/log/timgr.debug.log','aw')ff.write('dewdewd\n')f.write('test\n')f.flush()f.close()f=subprocess.Popen(['python','/Users/timger/Downloads/test.py'],shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE)f.write('test\n')f.stdin.write('sddsdsds\n')f.communicate()[0]f=subprocess.Popen(['python','/Users/timger/Downloads/test.py'],shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE)f.stdin.write('sddsdsds\n')f.communicate()[0]f=subprocess.Popen(['python','/Users/timger/Downloads/repeater.py'],shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE)f.stdin.write('sddsdsds\n')f.communicate()[0]f=subprocess.Popen(['python','/Users/timger/Downloads/repeater.py'],shell=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE)import pyquerys="""<sometags>"""    <Value>        <Scalar unitGlobalDataRef="Unit_0" unit="None" xmlns="xxxxyyyy">20</Scalar>     </Value></sometags>get_ipython().magic(u"paste s")sss=''.join(s)ssQ=pyquery.PyQuery(ss)Q.text()continue
+*** Last line of input (may not be in above history):
+continue

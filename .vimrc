@@ -112,7 +112,9 @@ endif
 autocmd BufNewFile *.py    0r ~/.vim/template/pytemplate.py
 autocmd BufNewFile *.sh    0r ~/.vim/template/myshell.sh
 autocmd BufNewFile *.js    0r ~/.vim/template/myjs.js
-autocmd BufNewFile *.rst    0r ~/.vim/template/my.rst
+autocmd BufNewFile *.rst    0r ~/.vim/template/xx.rst
+
+autocmd FileType javascript set shiftwidth=2|set expandtab
 
 
 
@@ -146,6 +148,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+
+Bundle 'tshirtman/vim-cython'
 
 
 Bundle 'Lokaltog/vim-powerline.git'
@@ -232,6 +236,10 @@ Bundle 'git://git.wincent.com/command-t.git'
 
 Bundle "jnwhiteh/vim-golang"
 Bundle "kevinw/pyflakes-vim"
+
+" RST writer
+Bundle "nvie/vim-rst-tables"
+Bundle "Rykka/riv.vim"
 
 
 filetype plugin indent on     " required!

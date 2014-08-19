@@ -38,3 +38,7 @@ export HDF5_DIR=/usr/local/Cellar/hdf5/1.8.9
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
 export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+
+export GOROOT=`go env GOROOT`
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=$GOROOT/pkg/

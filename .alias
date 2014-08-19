@@ -1,11 +1,45 @@
 alias httpserver="python -m SimpleHTTPServer"
+alias python_doc_test="python -m doctest -v"
+alias python_mem_test_use_memory_profiler="python -m memory_profiler"
+alias python_time_test_use_profile="python -m profile"
+alias python_cputime_test_use_kernprof="kernprof.py -l -v"
+alias cython_html="cython -a"
+alias python_debug_pidb="python -m ipdb "
+alias python_debug_pudb="python -m pudb.run "
+
+##
+alias virtualenv_python=". /Volumes/MACEXT/python_env/bin/activate && /Volumes/MACEXT/python_env/bin/python"
+alias virtualenv_pip=". /Volumes/MACEXT/python_env/bin/activate && /Volumes/MACEXT/python_env/bin/pip"
+
+##cordova prepare
+alias cordova_prepare="cordova prepare"
+alias cordova_plugin_admob="cordova  plugin add https://github.com/aliokan/cordova-plugin-admob"
+
+###doc project
+alias Doc_WorkPlace="cd /Users/timger/GitHub/Docs"
+
+##kivy
+alias kivy_garden="garden"
+
+#dns
+alias dns_flush="dscacheutil -flushcache"
+
+
+#chrome
+alias chrome_extensions="cd ~/Library/Application\ Support/Google/Chrome/Default/Extensions/"
+
+#android
+alias android_start_emulator="emulator -avd android_4_test"
+alias android_start_adb="adb start-server"
+alias android_install_apk="adb install "
+alias android_adb_debug="adb logcat"
 
 #git 命令别名
 alias clone="git clone"
 alias git_push="git push origin master"
 alias push="git push origin master"
 alias git_commit="git commit -m 'commit'"
-alias git_commit_msg="git commit -a -m"
+alias git_commit_msg="cat ~/.git_commit_help && sleep 0 && git commit -a -m"
 alias git_commit_auto="git commit -a -m '脚本自动提交不知道写什么'"
 alias git_cadd="git commit -a"
 alias git_remove_control="git rm --cached"
@@ -18,12 +52,16 @@ alias git_list_log="git log"
 alias git_list_branch="git branch -a"
 alias git_help_online="open http://learnxinyminutes.com/docs/zh-cn/git-cn/"
 
+##status
+alias git_status_remote="git remote show origin"
+
 # http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
 alias git_flow_start_feature="git flow feature start "
 alias git_flow_finish_feature="git flow feature finish  "
 alias git_flow_publish_feature="git flow feature publish  "
 alias git_flow_pull_feature="git flow feature pull  "
 alias git_flow_init="git flow init"
+alias git_blame="git blame"
 
 alias git_flow_start_release="git flow release start RELEASE"
 alias git_flow_publish_release="git flow release publish RELEASE"
@@ -52,6 +90,7 @@ alias kill_chrome="ps aux|grep Chrome|grep -v grep|awk '{print \$2}'|xargs kill"
 alias kill_zoc="ps aux|grep zoc|grep -v grep|awk '{print \$2}'|xargs kill"
 alias kill_xcode="ps aux|grep Xcode|awk '{print \$2}'|xargs kill"
 alias kill_dict="ps aux|grep YoudaoDict|awk '{print \$2}'|xargs kill"
+alias kill_email="ps aux|grep Thunderbird.app|awk '{print \$2}'|xargs kill"
 alias nib2objc="/Users/timger/Stegosaurus/tools/nib2objc.17\ PM/usr/local/bin/nib2objc"
 
 alias django_run="python manage.py  runserver"
@@ -69,3 +108,48 @@ alias cms_django_admin="/Volumes/MACEXT/sitecms/bin/django-admin.py"
 
 
 #EMP
+
+
+#shutdown
+alias shotdown_now="rm -vrf /Users/timger/Library/Logs/ZOC/* &&  shutdown -h now"
+
+
+#svn
+svn_remove_control="svn rm --keep-local"
+svn_import="svn import"
+
+
+
+#tree
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+
+#paster
+alias paster_create_from_timgerapp="paster create -t timgerapp"
+
+#tools
+alias readme_open="vim README.rst"
+
+#前端
+alias yo_angular="yo angular"
+alias yo_angular_controller="yo angular:controller"
+alias yo_angular_directive="yo angular:directive"
+alias yo_angular_route="yo angular:route"
+alias yo_angular_view="yo angular:view"
+alias yo_angular_filter="yo angular:filter"
+alias yo_angular_provider="yo angular:provider"
+alias yo_angular_constant="yo angular:constant"
+alias yo_angular_decorator="yo angular:decorator"
+alias yo_angular_factory="yo angular:factory"
+alias yo_angular_service="yo angular:service"
+alias yo_angular_help="open https://github.com/yeoman/generator-angular"
+alias yo_create_mobileapp="ionic start"
+
+#guanji
+alias shutdownnow="sudo shutdown -h now"
+
+
+#
+alias blog_new_post="echo rake post title='example'"
+alias blog_new_page="echo rake page name='pages/about.md'"
+alias jar_viewer="jar tvf "
